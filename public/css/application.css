@@ -1,0 +1,51 @@
+body {
+	font-family: 'Josefin Slab', serif;
+	color: black;
+}
+h1 {
+	font-weight: bold;
+	font-size: 80px;
+}
+
+#intro {
+	padding: 4em 10em;
+	color: white;
+	background:
+	  linear-gradient(
+	    rgba(0, 0, 0, 0.5), 
+	    rgba(0, 0, 0, 0.5)
+	  ),
+	  url(http://graphics8.nytimes.com/newsgraphics/2015/07/10/nola/assets/images/ward3-1254.jpg);
+	  background-position: bottom;
+	  background-size: 100% auto;
+	  background-repeat: no-repeat;
+}
+
+}
+.container {
+
+}
+.story {
+	border: 1px solid black;
+	border-radius: 1em;
+	padding: 1em;
+	margin: .5em 0;
+}
+
+.headline {
+	color: red;
+	font-size: 26px;
+}
+
+.lead {
+	font-size: 18px;
+}
+
+.keywords {
+	color: blue;
+	font-size: 14px;
+}
+
+.get-involved {
+	font-size: 14px;
+}
