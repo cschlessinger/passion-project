@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # PostgreSQL driver
 gem 'pg'
+gem 'pry'
 
 # Sinatra driver
 gem 'sinatra'
@@ -14,6 +15,7 @@ gem 'rake'
 gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'shotgun'
+gem 'httparty'
 
 group :test do
   gem 'shoulda-matchers'
