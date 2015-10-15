@@ -3,5 +3,7 @@ get '/' do
 	erb :index
 end
 
-post '/search' do
+get '/update' do
+	Article.populate_db
+	@new_articles = Article.where(latest: 1).to_json
 end

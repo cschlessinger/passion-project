@@ -10,6 +10,7 @@ require 'rubygems'
 require 'HTTParty'
 require 'pp'
 require 'pry'
+require 'hirb'
 
 require 'uri'
 require 'pathname'

@@ -1,0 +1,14 @@
+<% @articles.each_slice(3) do |article_row| %>
+	<div class='row'>
+	<% article_row.each do |article| %>
+		<div class='col-md-4'>
+			<div class='story'>
+				<div class='headline'><a href="<%= article.url %>"><%= article.headline %></a></div>
+				<div class='lead'><%= article.lead %></div>
+				<div class='keywords'><%= article.keywords %></div>
+				<div class='get-involved'></div>
+			</div>
+		</div>
+	<% end %>
+	</div>
+<% end %>

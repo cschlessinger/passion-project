@@ -9,14 +9,22 @@
 </div>
 <br>
 <div class='container'>
-<% @article.each do |article| %>
-<%= article.url %>
-<% end %>
-	<!-- <div class='row'>		
-		<div id='stories'>
-			<div class='col-md-4'>
-				
-			</div>
-		</div>
-	</div> -->
+
+<%= erb :'stories', { layout: false } %>
+
 </div>
+
+<div id="article-template" style="display:none">
+	<div class='col-md-4'>
+		<div class='story'>
+			<div class='headline'><a href="{{url}}">{{headline}}</a></div>
+			<div class='lead'>{{lead}}</div>
+			<div class='keywords'>{{keywords}}</div>
+			<div class='get-involved'></div>
+		</div>
+	</div>
+</div>
+
+<section class="border">
+  <button>Refresh feed</button>
+</section>

@@ -45,7 +45,6 @@ h1 {
     z-index: 1;
 } 
 
-
 #intro {
 	padding: 4em 10em;
 	color: white;
@@ -109,4 +108,24 @@ a:hover {
 
 .get-involved {
 	font-size: 14px;
+}
+
+button {
+  margin: 1em 0em 0 4em;
+  padding: .3em;
+  font-size: 20px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+button:focus {
+  outline: none
+}
+
+section.border button {
+  color: #CC5200;
+  background: #ffffff;
+  right: 0px;
+  border: solid 2px #CC5200;
 }
