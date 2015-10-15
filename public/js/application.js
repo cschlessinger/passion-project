@@ -17,7 +17,7 @@ $(document).ready(function() {
 	function goToByScroll(stories){
 	    $('html,body').animate({scrollTop: $("#"+id).offset().top},'slow');
 	}
-	newsCall();
+	// newsCall();
 	// charityCauses();
 })
 

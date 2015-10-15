@@ -9,9 +9,14 @@
 </div>
 <br>
 <div class='container'>
-	<div id='stories'>
-	<div class='row'>		
-		
-	</div>
-	</div>
+<% @article.each do |article| %>
+<%= article.url %>
+<% end %>
+	<!-- <div class='row'>		
+		<div id='stories'>
+			<div class='col-md-4'>
+				
+			</div>
+		</div>
+	</div> -->
 </div>
