@@ -2,8 +2,8 @@ class Cause < ActiveRecord::Base
 
 	include HTTParty
 
-  # has_many :charities
-  # has_many :articles, through
+  has_and_belongs_to_many :articles
+  has_many :charities
 
   def self.query_charity_causes
   	response = HTTParty.get('http://api.charitynavigator.org/api/v1/causes/?app_key=0eff25692da9109677649750f51ff65c&app_id=cc464b0f&format=json&limit=100')

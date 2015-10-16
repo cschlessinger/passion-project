@@ -1,18 +1,19 @@
 class Article < ActiveRecord::Base
 
 	include HTTParty
-  # has_many :charities
-  # has_many :causes, through: :charities
+  has_and_belongs_to_many :causes
 
-  def self.query_articles
-  	response = HTTParty.get('http://api.nytimes.com/svc/search/v2/articlesearch.json?q=italy&fq=type_of_material:("News") AND section_name:("World")&sort=newest&api-key=ec7fb763d9053389406d5d284fcab0b0:14:59506039')
+  def self.query_articles(keyword)
+  	response = HTTParty.get('http://api.nytimes.com/svc/search/v2/articlesearch.json?q=' + keyword + '&fq=type_of_material:("News") AND section_name:("World")&sort=newest&api-key=ec7fb763d9053389406d5d284fcab0b0:14:59506039')
   	@articles = response["response"]['docs']
   	# binding.pry
   	pp @articles
   end
 
-  def self.populate_db
-  	self.query_articles
+  def self.populate_db(keyword="humanitarian+aid")
+  	self.query_articles(keyword)
+    p "*" * 100
+    p keyword
   	all_keys = []
   	# binding.pry
 		@ids = Article.pluck(:article_id) # Store all previous DB URLs in an array
