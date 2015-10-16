@@ -1,0 +1,2 @@
+p ENV['NYTimesAPI']
+p ENV["LOGNAME"]

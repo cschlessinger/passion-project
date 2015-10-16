@@ -6,7 +6,7 @@ class Charity < ActiveRecord::Base
   belongs_to :cause
 
   def self.query_charity_orgs
-  	response = HTTParty.get('http://api.charitynavigator.org/api/v1/search/?app_key=0eff25692da9109677649750f51ff65c&app_id=cc464b0f&format=json&limit=100')
+  	response = HTTParty.get("http://api.charitynavigator.org/api/v1/search/?app_key=#{ENV['CharityAPI']}&app_id=#{ENV['CharityID']}&format=json&limit=100")
   	@orgs = response["objects"]
   end
 
