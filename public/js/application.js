@@ -49,8 +49,8 @@ $(document).ready(function() {
 		for (var i = 0; i < data.length; i++) {
 			articleHtml = Mustache.render(articleTemplate, data[i]);
 			lastRow = $('.row').last()
-			if(lastRow.children().length === 3) {
-				$('.container').append("<div class='row'></div>")
+			if(lastRow.children().length === 3 || $('#stories').children().length === 0) {
+				$('#stories').append("<div class='row'></div>")
 				lastRow = $('.row').last()
 			}
 			lastRow.append(articleHtml);
