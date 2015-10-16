@@ -18,7 +18,7 @@ $(document).ready(function() {
 	// function goToByScroll(stories){
 	//   $('html,body').animate({scrollTop: $(#stories).offset().top},'slow');
 	// };
-	$('button').click(function(event) {
+	$('button').click(function(event) { // Update data
 		event.preventDefault();
 		$.ajax({
 			method: 'get',
@@ -29,7 +29,7 @@ $(document).ready(function() {
 			update_data(data);
   	});
 	});
-	$('form').submit(function(event) {
+	$('form').submit(function(event) { // Search by term
 		event.preventDefault();
 		var search = $('input[type="text"]').val();
 		$.ajax({
@@ -40,6 +40,7 @@ $(document).ready(function() {
 		})
 		.done(function(data) {
 			update_data(data);
+			$('input[type="text"]').val("");
 		});
 	});
 	var update_data = function(data) {
@@ -54,6 +55,7 @@ $(document).ready(function() {
 				lastRow = $('.row').last()
 			}
 			lastRow.append(articleHtml);
+			// @TODO: figure out why first 7 or 8 of refresh feed doesn't pull in keywords
 		};
 	}
 })
