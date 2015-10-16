@@ -7,7 +7,7 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 require 'rubygems'
-require 'HTTParty'
+require 'httparty'
 require 'pp'
 require 'pry'
 require 'hirb'
