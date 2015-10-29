@@ -1,0 +1,184 @@
+body {
+	font-family: 'Josefin Slab', serif;
+	color: black;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 80px;
+}
+
+form {
+  float: right;
+}
+
+input[type="text"] {
+  height: 3em;
+  width: 20em;
+  color: #CC5200;
+  background-color: #ffffff;
+  opacity: 0.6;
+  display: inline-block;
+  border: solid 2px #CC5200;
+  height: 34px;
+  margin-left: 4em;
+  padding: .3em;
+  font-size: 20px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  color: #CC5200;
+  background-color: #ffffff;
+  opacity: 0.6;
+  right: 0px;
+  border: solid 2px #CC5200;
+  padding: .3em;
+  font-size: 20px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+input[type="submit"]:hover {
+  color: #4AA3BA;
+  background-color: #ffffff;
+  opacity: 0.6;
+  border: solid 2px #4AA3BA;
+}
+
+.c {
+	color: #CC5200;
+}
+
+.down {
+  position: relative; 
+  }
+
+ .down:after {
+    content: "";
+    border-top-right-radius: 3em;
+    border-top-left-radius: 3em;
+    bottom: 0;
+    display: block;
+    height: 2em;
+    left: 50%;
+    margin-left: -2em;
+    position: absolute;
+    width: 4em;
+  }
+
+ .down:before {
+    content: "";
+    border-color: #CC5200;
+    border-style: solid;
+    border-width: 0 .5em .5em 0;
+    bottom: .2em;
+    display: block;
+    height: 2em;
+    left: 50%;
+    margin-left: -.75em;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 2em;
+    z-index: 1;
+} 
+
+#intro {
+	padding: 4em 10em;
+	color: white;
+	height: 40em;
+	background:
+	  linear-gradient(
+	    rgba(0, 0, 0, 0.5), 
+	    rgba(0, 0, 0, 0.5)
+	  ),
+	  url(http://graphics8.nytimes.com/newsgraphics/2015/07/10/nola/assets/images/ward3-1254.jpg);
+	  background-position: bottom;
+	  background-size: 100% auto;
+	  background-repeat: no-repeat;
+}
+
+.call-to-action {
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	/*color: #CC5200;*/
+	padding-top: 2em;
+	padding-bottom: 1.2em;
+}
+
+.container {
+
+}
+
+#stories {
+	margin-top: 1.5em;
+}
+
+a {
+	color: #4AA3BA;
+}
+
+a:hover {
+	color: #306D75;
+}
+
+.story {
+	border: 1px solid black;
+	border-radius: 1em;
+	padding: 1em;
+	margin: .5em 0;
+}
+
+.headline {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.lead {
+	font-size: 18px;
+}
+
+.keywords {
+	font-size: 14px;
+	font-style: italic;
+}
+
+.get-involved {
+	font-size: 14px;
+}
+
+button {
+  height: 3em;
+  margin: 0em 0em 0 4em;
+  padding: .3em;
+  font-size: 20px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+button:focus {
+  outline: none
+}
+
+section.border {
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
+section.border button {
+  color: #CC5200;
+  background: #ffffff;
+  border: solid 2px #CC5200;
+}
+section.border button:hover {
+  color: #4AA3BA;
+  background: #ffffff;
+  border: solid 2px #4AA3BA;
+}
+

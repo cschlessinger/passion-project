@@ -1,0 +1,32 @@
+<div id="intro">
+	<form action='/search' method='post'>
+		<input type='text' name='search' placeholder='What issue would you like to read about?'>
+		<input type='submit' value='Search'>
+	</form>
+	<h1><span class="c">C</span>ause<span class="c">C</span>onnect</h1>
+	<h3>CauseConnect identifies actionable steps for people looking to help with problems covered in the media.<br><br>
+	For each article covering a crisis, disaster, or cause, CauseConnect suggests ways that you can help by linking you to organizations and charities tackling the problem.</h3>
+	<div class="call-to-action">Here's how you can help</div>
+	<a href="#stories"><div class='down'></div></a>
+
+</div>
+<br>
+<div class='container'>
+	<%= erb :'stories', { layout: false } %> <!-- Insert stories section erb -->
+</div>
+
+<!-- Declare template for individual articles -->
+<div id="article-template" style="display:none">
+	<div class='col-md-4'>
+		<div class='story'>
+			<div class='headline'><a href="{{url}}">{{headline}}</a></div>
+			<div class='lead'>{{lead}}</div>
+			<div class='keywords'>{{keywords}}</div>
+			<div class='get-involved'></div>
+		</div>
+	</div>
+</div>
+
+<section class="border">
+  <button>Refresh feed</button>
+</section>
