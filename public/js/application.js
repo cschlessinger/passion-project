@@ -19,6 +19,7 @@ $(document).ready(function() {
 	//   $('html,body').animate({scrollTop: $(#stories).offset().top},'slow');
 	// };
 	$('button').click(function(event) { // Update data
+		debugger
 		event.preventDefault();
 		$.ajax({
 			method: 'get',
