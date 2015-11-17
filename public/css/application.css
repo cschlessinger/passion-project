@@ -1,3 +1,7 @@
+html {
+  font-size: 20px
+}
+
 body {
 	font-family: 'Josefin Slab', serif;
 	color: black;
@@ -5,42 +9,38 @@ body {
 
 h1 {
 	font-weight: bold;
-	font-size: 80px;
+	font-size: 6em;
+}
+
+h2 {
+  font-size: 1.8em;
 }
 
 form {
   float: right;
+  width: 35em;
+}
+
+input {
+  vertical-align: top;
+  display: inline-block;
+  background-color: #ffffff;
+  opacity: 0.6;
+  color: #CC5200;
+  border: solid 2px #CC5200;
+  padding: .3em;
+  appearance: none;
+  height: 2em;
+  font-size: 1.3em;
 }
 
 input[type="text"] {
-  height: 3em;
-  width: 20em;
-  color: #CC5200;
-  background-color: #ffffff;
-  opacity: 0.6;
-  display: inline-block;
-  border: solid 2px #CC5200;
-  height: 34px;
-  margin-left: 4em;
-  padding: .3em;
-  font-size: 20px;
-  appearance: none;
-  box-shadow: none;
-  border-radius: 0;
+  width: 80%;
+  min-width: 18.7em;
 }
 
 input[type="submit"] {
-  display: inline-block;
-  color: #CC5200;
-  background-color: #ffffff;
-  opacity: 0.6;
   right: 0px;
-  border: solid 2px #CC5200;
-  padding: .3em;
-  font-size: 20px;
-  appearance: none;
-  box-shadow: none;
-  border-radius: 0;
 }
 
 input[type="submit"]:hover {
@@ -55,40 +55,41 @@ input[type="submit"]:hover {
 }
 
 .down {
+  padding-top: 2%;
   position: relative; 
-  }
+}
 
- .down:after {
-    content: "";
-    border-top-right-radius: 3em;
-    border-top-left-radius: 3em;
-    bottom: 0;
-    display: block;
-    height: 2em;
-    left: 50%;
-    margin-left: -2em;
-    position: absolute;
-    width: 4em;
-  }
+.down:after {
+  content: "";
+  border-top-right-radius: 3em;
+  border-top-left-radius: 3em;
+  bottom: 0;
+  display: block;
+  height: 2em;
+  left: 50%;
+  margin-left: -2em;
+  position: absolute;
+  width: 4em;
+}
 
- .down:before {
-    content: "";
-    border-color: #CC5200;
-    border-style: solid;
-    border-width: 0 .5em .5em 0;
-    bottom: .2em;
-    display: block;
-    height: 2em;
-    left: 50%;
-    margin-left: -.75em;
-    position: absolute;
-    transform: rotate(45deg);
-    width: 2em;
-    z-index: 1;
+.down:before {
+  content: "";
+  border-color: #CC5200;
+  border-style: solid;
+  border-width: 0 .5em .5em 0;
+  bottom: .2em;
+  display: block;
+  height: 2em;
+  left: 50%;
+  margin-left: -.75em;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 2em;
+  z-index: 1;
 } 
 
 #intro {
-	padding: 4em 10em;
+	padding: 4em 8em;
 	color: white;
 	height: 40em;
 	background:
@@ -104,15 +105,10 @@ input[type="submit"]:hover {
 
 .call-to-action {
 	text-align: center;
-	font-size: 30px;
+	font-size: 2em;
 	font-weight: bold;
-	/*color: #CC5200;*/
-	padding-top: 2em;
-	padding-bottom: 1.2em;
-}
-
-.container {
-
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
 #stories {
@@ -154,7 +150,7 @@ a:hover {
 
 button {
   height: 3em;
-  margin: 0em 0em 0 4em;
+  /*margin: 0em 0em 0 4em;*/
   padding: .3em;
   font-size: 20px;
   appearance: none;
@@ -181,4 +177,75 @@ section.border button:hover {
   background: #ffffff;
   border: solid 2px #4AA3BA;
 }
+
+@media screen and (max-width: 848px) {
+
+  html {
+    font-size: 18px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input {
+    font-size: 1.3em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  .call-to-action {
+    font-size: 1.6em;
+  }
+
+  #intro {
+    color: white;
+    background:
+      linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(http://graphics8.nytimes.com/newsgraphics/2015/07/10/nola/assets/images/ward3-1254.jpg);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 691px) {
+  html {
+    font-size: 16px;
+  }
+
+  #intro {
+    padding: 4em 3em;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  form {
+    right: 0px;
+  }
+
+  input {
+    font-size: 1.2em;
+  }
+
+  input[type="submit"] {
+    margin-bottom: .5em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  .call-to-action {
+    margin-bottom: .5em;
+  }
+}
+
+
 
