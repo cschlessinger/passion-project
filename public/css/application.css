@@ -21,34 +21,26 @@ form {
   width: 35em;
 }
 
-input[type="text"] {
-  height: 3em;
-  width: 80%;
-  color: #CC5200;
+input {
+  vertical-align: top;
+  display: inline-block;
   background-color: #ffffff;
   opacity: 0.6;
-  display: inline-block;
+  color: #CC5200;
   border: solid 2px #CC5200;
-  height: 34px;
   padding: .3em;
-  font-size: 20px;
   appearance: none;
-  box-shadow: none;
-  border-radius: 0;
+  height: 2em;
+  font-size: 1.3em;
+}
+
+input[type="text"] {
+  width: 80%;
+  min-width: 18.7em;
 }
 
 input[type="submit"] {
-  display: inline-block;
-  color: #CC5200;
-  background-color: #ffffff;
-  opacity: 0.6;
   right: 0px;
-  border: solid 2px #CC5200;
-  padding: .3em;
-  font-size: 20px;
-  appearance: none;
-  box-shadow: none;
-  border-radius: 0;
 }
 
 input[type="submit"]:hover {
@@ -97,7 +89,7 @@ input[type="submit"]:hover {
 } 
 
 #intro {
-	padding: 4em 10em;
+	padding: 4em 8em;
 	color: white;
 	height: 40em;
 	background:
@@ -188,33 +180,72 @@ section.border button:hover {
 
 @media screen and (max-width: 848px) {
 
-    html {
-      font-size: 18px;
-    }
+  html {
+    font-size: 18px;
+  }
 
-    form {
-      width: 100%;
-    }
+  form {
+    width: 100%;
+  }
 
-    h2 {
-      font-size: 1.6em;
-    }
+  input {
+    font-size: 1.3em;
+  }
 
-    .call-to-action {
-      font-size: 1.6em;
-    }
+  h2 {
+    font-size: 1.6em;
+  }
 
-    #intro {
-      /*padding: 4em 10em;*/
-      color: white;
-      background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.5), 
-          rgba(0, 0, 0, 0.5)
-        ),
-        url(http://graphics8.nytimes.com/newsgraphics/2015/07/10/nola/assets/images/ward3-1254.jpg);
-        /*min-width: 100vw;*/
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-    }
+  .call-to-action {
+    font-size: 1.6em;
+  }
+
+  #intro {
+    color: white;
+    background:
+      linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ),
+      url(http://graphics8.nytimes.com/newsgraphics/2015/07/10/nola/assets/images/ward3-1254.jpg);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+  }
 }
+
+@media screen and (max-width: 691px) {
+  html {
+    font-size: 16px;
+  }
+
+  #intro {
+    padding: 4em 3em;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  form {
+    right: 0px;
+  }
+
+  input {
+    font-size: 1.2em;
+  }
+
+  input[type="submit"] {
+    margin-bottom: .5em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  .call-to-action {
+    margin-bottom: .5em;
+  }
+}
+
+
+
