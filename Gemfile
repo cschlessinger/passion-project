@@ -1,3 +1,4 @@
+gem 'dotenv-rails', :groups => [:development, :test]
 source 'https://rubygems.org'
 
 # PostgreSQL driver
@@ -14,7 +15,6 @@ gem 'activesupport', '~>4.2.0'
 gem 'activerecord', '~>4.2.0'
 
 gem 'rake'
-gem 'dotenv-rails', :groups => [:development, :test]
 
 gem 'shotgun'
 gem 'httparty'

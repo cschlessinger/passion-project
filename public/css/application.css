@@ -1,3 +1,7 @@
+html {
+  font-size: 20px
+}
+
 body {
 	font-family: 'Josefin Slab', serif;
 	color: black;
@@ -5,23 +9,27 @@ body {
 
 h1 {
 	font-weight: bold;
-	font-size: 80px;
+	font-size: 6em;
+}
+
+h2 {
+  font-size: 1.8em;
 }
 
 form {
   float: right;
+  width: 35em;
 }
 
 input[type="text"] {
   height: 3em;
-  width: 20em;
+  width: 80%;
   color: #CC5200;
   background-color: #ffffff;
   opacity: 0.6;
   display: inline-block;
   border: solid 2px #CC5200;
   height: 34px;
-  margin-left: 4em;
   padding: .3em;
   font-size: 20px;
   appearance: none;
@@ -55,36 +63,37 @@ input[type="submit"]:hover {
 }
 
 .down {
+  padding-top: 2%;
   position: relative; 
-  }
+}
 
- .down:after {
-    content: "";
-    border-top-right-radius: 3em;
-    border-top-left-radius: 3em;
-    bottom: 0;
-    display: block;
-    height: 2em;
-    left: 50%;
-    margin-left: -2em;
-    position: absolute;
-    width: 4em;
-  }
+.down:after {
+  content: "";
+  border-top-right-radius: 3em;
+  border-top-left-radius: 3em;
+  bottom: 0;
+  display: block;
+  height: 2em;
+  left: 50%;
+  margin-left: -2em;
+  position: absolute;
+  width: 4em;
+}
 
- .down:before {
-    content: "";
-    border-color: #CC5200;
-    border-style: solid;
-    border-width: 0 .5em .5em 0;
-    bottom: .2em;
-    display: block;
-    height: 2em;
-    left: 50%;
-    margin-left: -.75em;
-    position: absolute;
-    transform: rotate(45deg);
-    width: 2em;
-    z-index: 1;
+.down:before {
+  content: "";
+  border-color: #CC5200;
+  border-style: solid;
+  border-width: 0 .5em .5em 0;
+  bottom: .2em;
+  display: block;
+  height: 2em;
+  left: 50%;
+  margin-left: -.75em;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 2em;
+  z-index: 1;
 } 
 
 #intro {
@@ -104,15 +113,10 @@ input[type="submit"]:hover {
 
 .call-to-action {
 	text-align: center;
-	font-size: 30px;
+	font-size: 2em;
 	font-weight: bold;
-	/*color: #CC5200;*/
-	padding-top: 2em;
-	padding-bottom: 1.2em;
-}
-
-.container {
-
+	padding-top: 2%;
+	padding-bottom: 2%;
 }
 
 #stories {
@@ -182,3 +186,35 @@ section.border button:hover {
   border: solid 2px #4AA3BA;
 }
 
+@media screen and (max-width: 848px) {
+
+    html {
+      font-size: 18px;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 1.6em;
+    }
+
+    .call-to-action {
+      font-size: 1.6em;
+    }
+
+    #intro {
+      /*padding: 4em 10em;*/
+      color: white;
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(http://graphics8.nytimes.com/newsgraphics/2015/07/10/nola/assets/images/ward3-1254.jpg);
+        /*min-width: 100vw;*/
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+    }
+}

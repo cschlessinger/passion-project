@@ -1,25 +1,7 @@
 'use strict'
 $(document).ready(function() {
-	// $('#stories').on(click, function(e) {
-	// 	e.preventDefault();
- //    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
- //    && location.hostname == this.hostname) {
- //      var $target = $(this.hash);
- //      $target = $target.length && $target
- //      || $('[name=' + this.hash.slice(1) +']');
- //      if ($target.length) {
- //        var targetOffset = $target.offset().top;
- //        $('html,body')
- //        .animate({scrollTop: targetOffset}, 1000);
- //       return false;
- //      }
- //    }
- //  });
-	// function goToByScroll(stories){
-	//   $('html,body').animate({scrollTop: $(#stories).offset().top},'slow');
-	// };
-	$('button').click(function(event) { // Update data
-		debugger
+	// Update page data (refresh feed) using default query
+	$('button').click(function(event) {
 		event.preventDefault();
 		$.ajax({
 			method: 'get',
@@ -30,7 +12,8 @@ $(document).ready(function() {
 			update_data(data);
   	});
 	});
-	$('form').submit(function(event) { // Search by term
+	// Search by term in search bar
+	$('form').submit(function(event) {
 		event.preventDefault();
 		var search = $('input[type="text"]').val();
 		$.ajax({
